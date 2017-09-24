@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-rd-f7y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cBM-BV-Kkk"/>
+                                </connections>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gFL-a8-XKO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qBZ-nT-d5u"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gFL-a8-XKO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CpP-b0-8bb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5e2-rd-f7y" secondAttribute="bottom" id="RkU-lH-Ohl"/>
+                            <constraint firstAttribute="trailing" secondItem="5e2-rd-f7y" secondAttribute="trailing" id="XRX-xn-doh"/>
+                            <constraint firstItem="5e2-rd-f7y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aZB-fy-HKC"/>
+                            <constraint firstAttribute="trailing" secondItem="gFL-a8-XKO" secondAttribute="trailing" id="gQR-Cb-UHw"/>
+                            <constraint firstItem="5e2-rd-f7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mKR-57-lH2"/>
+                            <constraint firstItem="gFL-a8-XKO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uNM-39-rG2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="5e2-rd-f7y" id="jMo-DF-6xX"/>
+                        <outlet property="searchBar" destination="gFL-a8-XKO" id="glo-x0-xuG"/>
+                        <outlet property="searchDisplayController" destination="YEK-aX-37G" id="nFq-H1-Omq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YEK-aX-37G">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="GzK-sw-LjQ"/>
+                        <outlet property="searchBar" destination="gFL-a8-XKO" id="uPI-2K-6dE"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="bkf-0P-daX"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="fW1-60-KbK"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="SxL-ul-Ip0"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
