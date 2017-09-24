@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>134761428804-jqvs81a80venv0vlv7njfo32bnuuof71.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.134761428804-jqvs81a80venv0vlv7njfo32bnuuof71</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAA0bc8X3kqAMOCGxvT1NoGHpJHr9D_x2Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>134761428804</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wow.Maps</string>
+	<key>PROJECT_ID</key>
+	<string>maps-f990e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>maps-f990e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:134761428804:ios:743ed026430992f5</string>
+	<key>DATABASE_URL</key>
+	<string>https://maps-f990e.firebaseio.com</string>
+</dict>
+</plist>
